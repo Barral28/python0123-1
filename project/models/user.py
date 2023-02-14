@@ -4,10 +4,12 @@ class ModelUser():
     def __init__(self):
         print('model user')
         self.db=db.Conection('tienda.db')
+        
     def getUser(self):
         cursor=self.db.getCursor()
         data=cursor.execute('select * from USUARIOS').fetchall()
         return data
+    
     def insertUser(self,data):
         inserSentence="INSERT INTO USUARIOS(USUARIO,PASSWORD,EMAIL,FULLNAME,SCORE,TIPOUSUARIO) VALUES(?,?,?,?,0,?)"
         cursor=self.db.getCursor()
