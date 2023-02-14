@@ -24,3 +24,22 @@ def insertData():
 def updateDolar():
     url = 'https://api.apis.net.pe/v1/tipo-cambio-sunat' #tipo cambio sunat
     pass
+
+message="""
+    1)Insertar data
+    2)Actualizar data del dolar
+    3)Generar reporte [Excel]
+    0)Salir
+"""
+print(message)
+a=int(input('ingrese la tarea a realizar: '))
+while a!=0:
+    os.system("cls")
+    if a==1:
+    elif a==2:
+        updateDolar()
+    elif a==3:    
+    else:
+        print("Opcion incorrecta. Vuelva a introducir")
+    print(message)
+    a=int(input('ingrese la tarea a realizar: '))

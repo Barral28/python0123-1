@@ -20,6 +20,7 @@ def registerUser():
     except Exception as e:
          print("error al ingresar data")
          print(e)
+
 def listUser():
     data=ctr.controllerUser()
     for row in data:
